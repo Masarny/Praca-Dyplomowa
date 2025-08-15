@@ -1,8 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
-    <p>creator</p>
-    <a href="{{ url_for('main') }}">Powrót</a>
 
+    <div class="container">
+        <h2>Create your password (random method)</h2>
+
+        <label for="length">Password length: <span id="length-value">24</span></label>
+        <input type="range" id="length" min="8" max="128" value="24">
+
+        <button id="generate-btn" class="btn">Generate password</button>
+
+        <div id="generated-password-box">
+            <p id="generated-password">Generated password: </p>
+        </div>
+
+        <h2>Create your password (dictionary method)</h2>
+
+        <label for="length">Number of words: <span id="length-value-dice">12</span></label>
+        <input type="range" id="length-dice" min="1" max="32" value="12">
+
+        <button id="generate-dice" class="btn">Generate password</button>
+
+        <div id="generated-password-box">
+            <p id="generated-dice">Generated password: </p>
+        </div>
+
+        <a href="{{ url_for('main') }}">Powrót</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='creator.js') }}"></script>
 {% endblock %}

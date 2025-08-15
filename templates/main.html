@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
-    <p>main</p>
-    <a href="{{ url_for('guidelines') }}">Guidelines</a>
-    <a href="{{ url_for('creator') }}">Creator</a>
-    <a href="{{ url_for('tester') }}">Tester</a>
-    <a href="{{ url_for('user_passwords') }}">User_Passwords</a>
-
+    <div class="main-container">
+        <h1>Password Manager Application</h1>
+        <div class="nav-container">
+            <a href="{{ url_for('guidelines') }}" class="nav"><h2>Guidelines</h2></a>
+            <a href="{{ url_for('creator') }}" class="nav"><h2>Creator</h2></a>
+            <a href="{{ url_for('tester') }}" class="nav"><h2>Tester</h2></a>
+            <a href="{{ url_for('user_passwords') }}" class="nav"><h2>User_Passwords</h2></a>
+        </div>
+    </div>
 {% endblock %}

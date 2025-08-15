@@ -1,8 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
-    <p>tester</p>
-    <a href="{{ url_for('main') }}">Powrót</a>
+    <div class="container">
+        <h2>Test the strength of your password</h2>
 
+        <input id="password" placeholder="input_password">
+
+        <button class="btn" id="check-btn">Test</button>
+
+        <p id="strength-text"></p>
+
+        <h2>Warnings: </h2>
+        <ul id="warnings-list"></ul>
+
+        <h2>Suggestions: </h2>
+        <ul id="suggestions-list"></ul>
+
+        <h2>Time needed to crack your password: </h2>
+        <p id="crack-time"></p>
+
+        <a href="{{ url_for('main') }}">Powrót</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='tester.js') }}"></script>
 {% endblock %}
