@@ -19,7 +19,7 @@
         <h2>Time needed to crack your password: </h2>
         <p id="crack-time"></p>
 
-        <a href="{{ url_for('main') }}">Powrót</a>
+        <button class="btn" id="check-btn" onclick="location.href='{{ url_for('main') }}'">Return</button>
     </div>
 
     <script src="{{ url_for('static', filename='tester.js') }}"></script>

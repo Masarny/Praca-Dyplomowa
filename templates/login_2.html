@@ -2,11 +2,12 @@
 
 {% block content %}
     <div class="container">
-        <h2>login_2</h2>
+        <h2>Log in</h2>
 
+        <input id="log_in" placeholder="Input password"><br>
 
+        <p style="color: red">Incorrect password! Try again.</p>
 
-        <a href="{{ url_for('main') }}">Next</a>
+        <button class="btn" id="check-btn" onclick="location.href='{{ url_for('main') }}'">Log in</button>
     </div>
-
 {% endblock %}

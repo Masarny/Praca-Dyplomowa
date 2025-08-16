@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
     <div class="container">
         <h2>Create your password (random method)</h2>
 
@@ -25,8 +24,8 @@
             <p id="generated-dice">Generated password: </p>
         </div>
 
-        <a href="{{ url_for('main') }}">Powrót</a>
-    </div>
+        <button class="btn" id="check-btn" onclick="location.href='{{ url_for('main') }}'">Return</button>
+        </div>
 
     <script src="{{ url_for('static', filename='creator.js') }}"></script>
 {% endblock %}
